@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 
-namespace Facturacion.Web.App_Code.Base
+namespace Facturacion.Web.Core.AppCode.Base
 {
     /// <summary>
     /// Clase base para todas las páginas del sistema
@@ -487,16 +487,19 @@ namespace Facturacion.Web.App_Code.Base
         /// <returns>Mensaje amigable</returns>
         private string DeterminarMensajeError(Exception ex)
         {
-            if (ex is UnauthorizedAccessException)
-                return "No tiene permisos para realizar esta operación";
-            else if (ex is TimeoutException)
-                return "La operación tardó demasiado tiempo. Intente nuevamente.";
-            else if (ex is ArgumentException)
-                return "Los datos proporcionados no son válidos";
-            else if (ex is InvalidOperationException)
-                return "No se puede realizar esta operación en este momento";
-            else
-                return "Ha ocurrido un error inesperado. Contacte al administrador si el problema persiste.";
+            switch (ex)
+            {
+                case UnauthorizedAccessException:
+                    return "No tiene permisos para realizar esta operación";
+                case TimeoutException:
+                    return "La operación tardó demasiado tiempo. Intente nuevamente.";
+                case ArgumentException:
+                    return "Los datos proporcionados no son válidos";
+                case InvalidOperationException:
+                    return "No se puede realizar esta operación en este momento";
+                default:
+                    return "Ha ocurrido un error inesperado. Contacte al administrador si el problema persiste.";
+            }
         }
 
         /// <summary>
