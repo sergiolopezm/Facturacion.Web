@@ -251,6 +251,12 @@
     <Compile Include="Models\DTOs\Reportes\ResumenDiarioDto.cs" />
     <Compile Include="Models\DTOs\Reportes\ResumenMensualDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ArticuloService.cs" />
+    <Compile Include="Services\AuthService.cs" />
+    <Compile Include="Services\CategoriaService.cs" />
+    <Compile Include="Services\ClienteService.cs" />
+    <Compile Include="Services\FacturaService.cs" />
+    <Compile Include="Services\ReporteService.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -277,7 +283,6 @@
     <Folder Include="Pages\Facturas\" />
     <Folder Include="Pages\Master\" />
     <Folder Include="Pages\Reportes\" />
-    <Folder Include="Services\" />
     <Folder Include="Styles\" />
     <Folder Include="Utils\" />
   </ItemGroup>
