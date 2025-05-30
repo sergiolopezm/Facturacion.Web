@@ -209,6 +209,9 @@
     <Content Include="Views\web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\Base\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Core\ApiClient.cs" />
@@ -250,6 +253,9 @@
     <Compile Include="Models\DTOs\Reportes\DashboardDto.cs" />
     <Compile Include="Models\DTOs\Reportes\ResumenDiarioDto.cs" />
     <Compile Include="Models\DTOs\Reportes\ResumenMensualDto.cs" />
+    <Compile Include="Pages\Master\SiteMaster.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ArticuloService.cs" />
     <Compile Include="Services\AuthService.cs" />
@@ -266,7 +272,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Code\" />
+    <Folder Include="App_Code\Exceptions\" />
+    <Folder Include="App_Code\Security\" />
     <Folder Include="App_Data\" />
     <Folder Include="Business\" />
     <Folder Include="Controllers\" />
@@ -281,7 +288,6 @@
     <Folder Include="Pages\Categorias\" />
     <Folder Include="Pages\Clientes\" />
     <Folder Include="Pages\Facturas\" />
-    <Folder Include="Pages\Master\" />
     <Folder Include="Pages\Reportes\" />
     <Folder Include="Styles\" />
     <Folder Include="Utils\" />
